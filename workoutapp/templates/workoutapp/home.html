@@ -1,0 +1,6 @@
+<h1>Workout App Home Page</h1> 
+{% if user.is_authenticated %}
+Hello, {{user.username}}!
+{% else %}
+Please <a href="{% url 'workoutapp:login' %}">Login</a>
+{% endif %}
